@@ -1,19 +1,26 @@
 package homework.lesson1;
 
 public abstract class Animal {
-    String name;
-    int ran;
-    int swamBy;
+    public String name;
+    public int ran;
+    public int swamBy;
 
-//    public void run(int ran) {
-//        if (ran <= 200) {
-//            System.out.println(name + " пробежал: " + ran + " метров");
-//        } else {
-//            System.out.println(name + " не может бегать больше 200 метров");
-//        }
-//    }
-//    public void swamBy(int swamBy) {
-//        System.out.println("Кот - не умеет плавать");
-//    }
+
+    public Animal(String name, int ran, int swamBy) {
+        this.name = name;
+        this.ran = ran;
+        this.swamBy = swamBy;
+    }
+
+
+    public abstract void running();
+    public void running(int ran) {
+        System.out.println(name + " пробежал " + ran + " метров!");
+    }
+
+
+    public abstract void swimming();
+    public void swimming(int swamBy) {
+        System.out.println(name + " проплыл " + swamBy + " метров!");
+    }
 }
-

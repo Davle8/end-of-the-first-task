@@ -1,28 +1,24 @@
 package homework.lesson1;
 
-public class Cat extends Animal{
-    public Cat(String name) {
-    this.name = name;
+public class Cat extends Animal {
+
+    public Cat(String name, int ran, int swamBy) {
+        super(name, ran, swamBy);
     }
 
-    public void run(int ran) {
+    @Override
+    public void running() {
         if (ran <= 200) {
-            System.out.println("Кот по кличке: " + name + " пробежал: " + ran + " метров");
+            System.out.println(name + " пробежал " + ran + " метров!");
         } else {
-            System.out.println("Кот по кличке: " + name + " не может бегать больше 200 метров");
+            System.out.println(name + " не может бегать больше 200 метров!");
         }
     }
-    public void swamBy(int swamBy) {
-        System.out.println("Кот - не умеет плавать");
+
+    @Override
+    public void swimming() {
+        if (swamBy >= 0) {
+            System.out.println(name + " не умеет плавать, он же кот!");
+        }
     }
 }
-
-/*
-    public void run(int ran) {
-        if (ran <= 200) {
-            System.out.println(name + " пробежал: " + ran + " метров");
-        } else {
-            System.out.println(name + " не может бегать больше 200 метров");
-        }
-    }
-    */
