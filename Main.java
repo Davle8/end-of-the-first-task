@@ -12,14 +12,13 @@ public class Main {
                 new Dog("Beta", 400, 11),
                 new Dog("Gamma", 600, 8),
         };
-//        for (Animal o : animals) {
-//            o.running();
-//        }
-//        for (Animal o : animals) {
-//            o.swimming();
-//        }
-
-//        Arrays.stream(animals).count();
+        for (Animal o : animals) {
+            o.running();
+        }
+        for (Animal o : animals) {
+            o.swimming();
+        }
+        System.out.println();
         for (Animal o : animals) {
             String name = o.name;
             System.out.print(name + " ");
