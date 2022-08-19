@@ -1,5 +1,7 @@
 package homework.lesson1;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Animal[] animals = {
@@ -9,13 +11,20 @@ public class Main {
                 new Dog("Alpha", 500, 10),
                 new Dog("Beta", 400, 11),
                 new Dog("Gamma", 600, 8),
-
         };
+//        for (Animal o : animals) {
+//            o.running();
+//        }
+//        for (Animal o : animals) {
+//            o.swimming();
+//        }
+
+//        Arrays.stream(animals).count();
         for (Animal o : animals) {
-            o.running();
+            String name = o.name;
+            System.out.print(name + " ");
         }
-        for (Animal o : animals) {
-            o.swimming();
-        }
+        System.out.println();
+        System.out.println(Arrays.stream(animals).count() + " животных приняли участие!");
     }
 }
