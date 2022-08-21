@@ -15,6 +15,7 @@ public class Main {
         for (Animal o : animals) {
             o.running();
         }
+        System.out.println();
         for (Animal o : animals) {
             o.swimming();
         }
